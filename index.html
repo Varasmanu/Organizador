@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Health Organizer</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="pageHome">
+      <div class="container">
+        <div class="row">
+          <label for="input_name">Nombre</label>
+          <input
+            type="text"
+            name="input_name"
+            id="input_name"
+            placeholder="Ingresá tu nombre"
+          />
+          <div class="trackeo">
+            <h2>Trackeo</h2>
+            <h4>Presión</h4>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="pres_input" />
+            </div>
+            <h4>Glucemia</h4>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="gluc_input" />
+            </div>
+            <h4>Medicamentos</h4>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="meds_input" />
+            </div>
+            <div class="howMany">
+              <label for="medicamentos_select"
+                >¿Cuántos medicamentos son?</label
+              >
+              <select
+                name="medicamentos_select"
+                class="form-select"
+                aria-label="Default select example"
+              >
+                <option selected>...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+          <button id="btn_siguiente">Siguiente</button>
+        </div>
+      </div>
+    </section>
+    <section class="pageMeds">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" id="row"></div>
+          <button class="btn btn-primary" id="btnfinish">Finalizar</button>
+        </div>
+      </div>
+    </section>
+    <section class="pageList">
+      <div class="container">
+        <div class="row">
+          <div class="data">
+            <strong id="fecha">Fecha:</strong>
+            <strong
+              >Presión:
+              <p id="pres"></p>
+            </strong>
+            <strong
+              >Glucemia:
+              <p id="gluc"></p>
+            </strong>
+          </div>
+          <div class="lista">
+            <ul id="superlist">x`</ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="addPage">
+      <div class="container">
+        <div class="row">
+          <div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              id="btnmodal"
+            >
+              Launch demo modal
+            </button>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Modal title
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="" id="presion">
+                    <label for="presion_input">Presión:</label>
+                    <input
+                      type="number"
+                      name="presion_input"
+                      id="presion_input"
+                    />
+                    /
+                    <input type="number" id="presion_input2" />
+                  </div>
+                </div>
+                <div id="glucemia">
+                  <label for="glucemia_input">Glucemia:</label>
+                  <input
+                    type="number"
+                    name="glucemia_input"
+                    id="glucemia_input"
+                  />
+                </div>
+                <div id="medicamentos">
+                  <p>Medicamentos</p>
+                  <ul id="medicamentos_list"></ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="changesbtn">
+                    Guardar cambios
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>SummerHack</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
